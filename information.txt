@@ -7,4 +7,4 @@ b. Bugs you’ve identified but didn’t have time to fix.
 c. Things you would do if you had more time to complete the task.
 	implement extra points with the api: https://holidayapi.com/
 
-Time: 
+Time: 2h 10 mints
