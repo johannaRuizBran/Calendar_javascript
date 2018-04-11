@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-
-</body>
+    <head>
+        <title>Calendar</title>
+        <!--files-->
+        <link type="text/css" rel="stylesheet" href="style/style.css">
+        <script type="text/javascript" src="js/javascript.js"></script>	
+        <!--Materialize-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">    
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    </head>
+    <body>
+    	<div class="calendar-principal-container">    		
+    		<div class="div-input-container">    			
+    			<h1 >Calendar</h1>
+    			<table>
+    				<td>
+    					<div class="input-field col s12" >
+				          <input id="start_date​" type="date" class="validate">
+				          <label for="Start Date​">Start Date​</label>
+				        </div>
+    				</td>
+    				<td>
+    					<div class="input-field col s12">
+				          <input id="number_days" type="number" class="validate">
+				          <label for="Number of days">Number of days</label>
+				        </div>                        
+    				</td>
+    				<td>
+    					<div class="input-field col s12">
+				          <input id="country_code" type="text" class="validate">				          
+                          <label for="Country Code">Country Code</label>
+				        </div>	                        
+    				</td>
+    			</table> 
+                <a id="ecex" onclick="input_data()" class="waves-effect waves-light btn">Execute</a>
+    		</div>             
+            <div id= "calendar">
+                
+            </div>   		    		
+    	</div>        
+    </body>
 </html>

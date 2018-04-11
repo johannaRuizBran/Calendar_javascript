@@ -1,0 +1,12 @@
+.div-input-container{
+    margin-right: 15%; 
+    margin-left: 15%;
+ }
+ .calendar-principal-container{
+    margin-left: 10%; 
+    margin-right: 10%; 
+    margin-top: 3%;
+    text-align: center; 
+    border-radius: 10px;
+    padding: 10px;
+ }
