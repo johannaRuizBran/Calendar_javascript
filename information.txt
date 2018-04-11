@@ -1,0 +1,10 @@
+a. A list of any requirements you could not implement.
+	at the moment it was not found
+
+b. Bugs you’ve identified but didn’t have time to fix.
+	at the moment it was not found
+
+c. Things you would do if you had more time to complete the task.
+	implement extra points with the api: https://holidayapi.com/
+
+Time: 
