@@ -1,3 +1,16 @@
+//Not implemented yet
+function request(){    
+    $.ajax({
+        url: 'https://holidayapi.com/v1/holidays?key=219c7fcd-124a-4db1-a337-289437d4785c&country=US&year=2017&month=04',        
+        type: 'GET',
+        crossDomain: true,
+        dataType: 'jsonp',
+        success: function() { alert("Success"); },
+        error: function() { alert('Failed!'); },
+        beforeSend: setHeader
+    });
+}
+
 /*
     function for call of creation of diferent 
     calendars according to what indicated by the user
@@ -54,7 +67,7 @@ function input_data(){
     else{
         swal({
           title: "Hello!",
-          text: "Some inputs are blank. We will show the current date.",
+          text: "As some data is not inserted by the user, the current date will be displayed.",
           icon: 'warning'
         });
         country_code_input= "CR";        
@@ -106,6 +119,18 @@ function create_calendar(calendar_id,final_day,initial_day,initial_day_name, fin
 
 
 /*
+    paints the background of each number according to whether it is a weekend or a weekday
+*/
+function color(column,td){
+    if(column==6 | column== 0){
+        td.bgColor= "#FFFF66";
+    }
+    else{
+        td.bgColor= "#90EE90"
+    }
+}
+
+/*
     create the table 2_nd part
 */
 function create_table_2_part(count,final_month_days,final_day,initial_day,table){
@@ -119,7 +144,8 @@ function create_table_2_part(count,final_month_days,final_day,initial_day,table)
             var td = document.createElement('td');            
             if(initial_day <= count){                                                   
                 td.innerHTML = count;                
-                final_day= final_day-1;                           
+                final_day= final_day-1;
+                color(c,td);                            
             }                
             else{
                 td.innerHTML = " ";                 
@@ -141,6 +167,7 @@ function create_table_1_part(tr,column,final_day,initial_day,table,final_month_d
         if(initial_day <= count & final_day >= 1){             
             td.innerHTML = count;
             final_day= final_day-1;                       
+            color(column,td); 
         }        
         else{
             td.innerHTML = " "; 
